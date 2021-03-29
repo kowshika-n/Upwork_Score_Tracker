@@ -38,13 +38,13 @@ def GetPageUsingRequest(url):
 
 for url in url_List:
     if url and 'upwork' in url:
+        Name = Score = ""
         # scrape html from url
-        html = GetPageUsingRequest(url)
-        if html:
-            Name = Score = ""
+        if html := GetPageUsingRequest(url):
+            # parse text using bs4
             if soup := BeautifulSoup(html, 'html.parser'):
-                if item:= soup.find_all('h1', attrs={'itemprop': 'name'}):
-                    Name = item[0].text.strip()
+                if items:= soup.find_all('h1', attrs={'itemprop': 'name'}):
+                    Name = items[0].text.strip()
                 if items := soup.select('h3'):
                     Score = items[0].text
                     if '%' not in Score:
