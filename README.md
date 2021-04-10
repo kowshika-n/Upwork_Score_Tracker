@@ -5,6 +5,13 @@
 
 This tool enables to track Job Success Score from a given profile URL / list of URLs
 
+
 ### Requirements
   - [BeautifulSoup](https://pypi.org/project/beautifulsoup4/)
   - [Requests](https://pypi.org/project/requests/)
+
+
+### Output Chart based on weekly scheduled script
+
+<img src='https://docs.google.com/spreadsheets/d/e/2PACX-1vRMJ38DDNRjuQ03T9_On-29eQ11FSYBkJiNu_al2UHOqxnFGbYEnqm3EpX3XARkVu4vD7bQMbBFoGha/pubchart?oid=696490340&format=image' width=900>
+
