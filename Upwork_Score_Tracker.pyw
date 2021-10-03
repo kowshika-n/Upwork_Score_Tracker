@@ -16,11 +16,11 @@ def GetPageUsingRequest(url):
         header =  { 'accept-encoding': 'gzip, deflate', 'accept-language': 'en,en-US;q=0.9,en-IN;q=0.8,ta;q=0.7',
                    'cache-control': 'max-age=0', 'dnt': '1',	'sec-fetch-dest': 'document', 'sec-fetch-mode': 'navigate',
                    'sec-fetch-site': 'none', 'sec-fetch-user': '?1', 'Referer': 'https://www.google.com/', 'upgrade-insecure-requests': '1',
-                   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.4044.129 Safari/537.36' }
+                   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36' }
 
         session = requests.Session()
         session.max_redirects = 20
-        response = session.get(url, verify=False, timeout=10, headers=header, stream=False)
+        response = session.get(url, verify=False, timeout=30, headers=header, stream=False)
         if response.status_code == 200:
             print(f'{url} load Successful')
             if response.headers.get('Content-Encoding', '') == 'br':
